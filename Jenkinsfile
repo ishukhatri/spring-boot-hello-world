@@ -17,10 +17,6 @@ pipeline {
 
         stage('Build') {
             steps {
-                // Install the necessary x86_64 libraries as the root user
-                                sh '''
-                                  su - root -c "apt-get update && apt-get install -y libc6-x86"
-                                '''
                 sh 'mvn clean package'
             }
         }
