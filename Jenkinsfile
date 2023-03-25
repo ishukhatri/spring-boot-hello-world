@@ -28,7 +28,7 @@ pipeline {
     post {
         always {
             // Archive the built artifact with a unique name
-            archiveArtifacts artifacts: 'target/*.jar', fingerprint: true, onlyIfSuccessful: true, name: "my-spring-app-${BUILD_NUMBER}.jar"
+            archiveArtifacts artifacts: 'target/*.jar', fingerprint: true, onlyIfSuccessful: true
         }
     }
 }
